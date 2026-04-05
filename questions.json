@@ -1,0 +1,202 @@
+[
+  {
+    "text": "How important is a completely quiet environment for you to study effectively?",
+    "options": [
+      ["Absolutely essential — I cannot study without silence", 0],
+      ["Very important — I strongly prefer it", 1],
+      ["Somewhat important — I can manage with low noise", 2],
+      ["Not very important — background noise rarely bothers me", 3],
+      ["Not important at all — noise has no effect on me", 4]
+    ]
+  },
+  {
+    "text": "How deeply can you concentrate when studying in a completely silent room?",
+    "options": [
+      ["Extremely deeply — I lose track of time entirely", 0],
+      ["Very deeply — I stay focused for long periods", 1],
+      ["Moderately — I focus well but take regular breaks", 2],
+      ["Lightly — my mind still wanders despite the silence", 3],
+      ["I struggle to concentrate even in total silence", 4]
+    ]
+  },
+  {
+    "text": "How quickly does background noise (e.g. conversations, music) break your concentration?",
+    "options": [
+      ["I never notice it once I am focused", 0],
+      ["It takes a significant disturbance to break my focus", 1],
+      ["Moderate noise gradually pulls my attention away", 2],
+      ["Even low noise interrupts me within minutes", 3],
+      ["Any noise immediately destroys my concentration", 4]
+    ]
+  },
+  {
+    "text": "How long can you maintain deep focus in your preferred study environment before losing concentration?",
+    "options": [
+      ["More than 90 minutes without any break", 0],
+      ["60 to 90 minutes before needing a short pause", 1],
+      ["30 to 60 minutes before my attention drifts", 2],
+      ["15 to 30 minutes before I lose focus", 3],
+      ["Less than 15 minutes before I become distracted", 4]
+    ]
+  },
+  {
+    "text": "How often do you actively seek out a quiet zone (library, empty room) when you need to study seriously?",
+    "options": [
+      ["Always — it is part of my standard study routine", 0],
+      ["Often — I do so for most important study sessions", 1],
+      ["Sometimes — only when the task is particularly demanding", 2],
+      ["Rarely — I usually study wherever I happen to be", 3],
+      ["Never — I do not seek quiet zones at all", 4]
+    ]
+  },
+  {
+    "text": "How does studying in a noisy environment affect the quality of your work?",
+    "options": [
+      ["It has no effect — my output is the same regardless", 0],
+      ["Slight effect — minor drop in quality under noise", 1],
+      ["Noticeable effect — I make more errors and work slower", 2],
+      ["Significant effect — the quality of my work drops sharply", 3],
+      ["Severe effect — I am practically unable to produce good work", 4]
+    ]
+  },
+  {
+    "text": "How comfortable are you studying in shared spaces such as open libraries or common rooms?",
+    "options": [
+      ["Very comfortable — shared spaces work perfectly for me", 0],
+      ["Fairly comfortable — minor distractions are manageable", 1],
+      ["Somewhat uncomfortable — I tolerate it but prefer otherwise", 2],
+      ["Quite uncomfortable — shared spaces drain my concentration", 3],
+      ["Very uncomfortable — I avoid them entirely for study", 4]
+    ]
+  },
+  {
+    "text": "How often do you use tools such as noise-cancelling headphones or earplugs to create a quiet study space?",
+    "options": [
+      ["Never — my environment is naturally quiet enough", 0],
+      ["Occasionally — only in unusually noisy situations", 1],
+      ["Sometimes — for medium-difficulty tasks", 2],
+      ["Often — I rely on them for most study sessions", 3],
+      ["Always — I cannot study at all without them", 4]
+    ]
+  },
+  {
+    "text": "How well do you retain information studied in a quiet environment compared to a noisy one?",
+    "options": [
+      ["Equally well — the environment makes no difference", 0],
+      ["Slightly better in quiet — a small but noticeable difference", 1],
+      ["Moderately better — quiet clearly improves my retention", 2],
+      ["Much better — retention is significantly higher in silence", 3],
+      ["Dramatically better — I barely retain anything in noisy settings", 4]
+    ]
+  },
+  {
+    "text": "How often do unexpected sounds (a door slamming, a phone ringing nearby) cause you to lose your train of thought?",
+    "options": [
+      ["Never — I remain focused regardless of sudden sounds", 0],
+      ["Rarely — only very loud or startling sounds affect me", 1],
+      ["Sometimes — moderate unexpected sounds break my focus", 2],
+      ["Often — even small sounds regularly disrupt my thinking", 3],
+      ["Always — any unexpected sound resets my concentration entirely", 4]
+    ]
+  },
+  {
+    "text": "How would you describe your ability to enter a state of deep focus (flow) in your usual study setting?",
+    "options": [
+      ["Very easy — I enter a flow state quickly and regularly", 0],
+      ["Fairly easy — I usually get there within a few minutes", 1],
+      ["Moderate — it takes effort and the right conditions", 2],
+      ["Difficult — I rarely reach a genuine state of deep focus", 3],
+      ["Very difficult — I have almost never experienced deep focus", 4]
+    ]
+  },
+  {
+    "text": "How much does low-level ambient sound (e.g. air conditioning, distant traffic) affect your ability to study?",
+    "options": [
+      ["Not at all — I find it neutral or even helpful", 0],
+      ["Very slightly — I notice it but it does not bother me", 1],
+      ["Somewhat — it is mildly distracting over time", 2],
+      ["Considerably — it noticeably reduces my concentration", 3],
+      ["Greatly — even soft ambient sound makes studying very hard", 4]
+    ]
+  },
+  {
+    "text": "How often do you feel mentally exhausted after studying in a noisy or non-preferred environment?",
+    "options": [
+      ["Never — environmental noise does not tire me", 0],
+      ["Rarely — only after very long sessions in noisy places", 1],
+      ["Sometimes — moderate fatigue after a few hours", 2],
+      ["Often — I regularly feel drained after studying in noise", 3],
+      ["Always — even short noisy sessions leave me mentally depleted", 4]
+    ]
+  },
+  {
+    "text": "How satisfied are you with the quiet study options currently available to you (at university, home, or elsewhere)?",
+    "options": [
+      ["Very satisfied — I always have access to an ideal quiet space", 0],
+      ["Fairly satisfied — adequate quiet spaces are usually available", 1],
+      ["Neutral — access is inconsistent but I manage", 2],
+      ["Fairly dissatisfied — quiet spaces are difficult to find", 3],
+      ["Very dissatisfied — I almost never have access to a quiet space", 4]
+    ]
+  },
+  {
+    "text": "How effectively can you switch between different topics or tasks while remaining in deep concentration?",
+    "options": [
+      ["Very effectively — I transition smoothly without losing focus", 0],
+      ["Fairly effectively — brief adjustment time but focus is maintained", 1],
+      ["Moderately — switching topics disrupts my concentration noticeably", 2],
+      ["With difficulty — task-switching significantly breaks my focus", 3],
+      ["Very poorly — any switch essentially ends my concentration session", 4]
+    ]
+  },
+  {
+    "text": "How often do you plan your study sessions around the availability of a quiet environment?",
+    "options": [
+      ["Never — I study whenever and wherever it is convenient", 0],
+      ["Rarely — only for major deadlines or exams", 1],
+      ["Sometimes — I consider it for important tasks", 2],
+      ["Often — quiet availability is a key factor in my planning", 3],
+      ["Always — I will not begin a study session without securing a quiet space", 4]
+    ]
+  },
+  {
+    "text": "How does studying with background music (without lyrics) affect your concentration?",
+    "options": [
+      ["It helps me focus — I concentrate better with instrumental music", 0],
+      ["It is neutral — no noticeable positive or negative effect", 1],
+      ["It mildly distracts me — I prefer silence over music", 2],
+      ["It noticeably distracts me — music reduces my concentration", 3],
+      ["It severely distracts me — any music makes studying very hard", 4]
+    ]
+  },
+  {
+    "text": "How well do you perform on complex cognitive tasks (problem-solving, essay writing) in your usual study environment?",
+    "options": [
+      ["Excellently — I consistently produce high-quality work", 0],
+      ["Well — my performance is generally strong with minor lapses", 1],
+      ["Adequately — I complete tasks but not always to my best ability", 2],
+      ["Poorly — I frequently struggle to think clearly during tasks", 3],
+      ["Very poorly — my cognitive performance is consistently low", 4]
+    ]
+  },
+  {
+    "text": "How aware are you of other people's movements or activities around you while studying?",
+    "options": [
+      ["Not aware at all — I am fully absorbed in my work", 0],
+      ["Slightly aware — I notice them but am not distracted", 1],
+      ["Moderately aware — they occasionally pull my attention", 2],
+      ["Very aware — I frequently lose focus due to others nearby", 3],
+      ["Extremely aware — I cannot ignore what others around me are doing", 4]
+    ]
+  },
+  {
+    "text": "How confident are you that your current study environment supports your best academic performance?",
+    "options": [
+      ["Very confident — my environment is ideal for my needs", 0],
+      ["Fairly confident — it meets most of my requirements", 1],
+      ["Uncertain — it is acceptable but far from ideal", 2],
+      ["Not very confident — my environment often works against me", 3],
+      ["Not confident at all — my environment significantly hinders my performance", 4]
+    ]
+  }
+]
