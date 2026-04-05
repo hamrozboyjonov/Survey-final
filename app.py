@@ -275,7 +275,15 @@ def validate_dob(dob_str: str) -> bool:
 
 
 def validate_student_id(sid: str) -> bool:
-    return sid.strip().isdigit() and len(sid.strip()) >= 4
+    cleaned: str = sid.strip()
+    if len(cleaned) < 4:
+        return False
+    idx: int = 0
+    while idx < len(cleaned):
+        if not cleaned[idx].isdigit():
+            return False
+        idx += 1
+    return True
 
 
 def get_outcome(total_score: int) -> dict:
@@ -306,7 +314,6 @@ def build_csv_bytes(result: dict, answers: list) -> bytes:
 def build_txt_bytes(result: dict, answers: list) -> bytes:
     lines: list = [
         "QUIET STUDY ZONE PREFERENCE & CONCENTRATION DEPTH SURVEY",
-        "Westminster International University in Tashkent",
         "=" * 60,
     ]
     for key, value in result.items():
@@ -457,8 +464,7 @@ MAX_SCORE: int  = len(QUESTIONS) * 4
 st.markdown("""
 <div class="banner">
   <h1>📚 Quiet Study Zone Survey</h1>
-  <p>Preference &amp; Concentration Depth Assessment &nbsp;·&nbsp;
-     Westminster International University in Tashkent</p>
+  <p>Preference &amp; Concentration Depth Assessment</p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -482,23 +488,6 @@ if st.session_state["page"] == "home":
             st.session_state["page"] = "load"
             st.rerun()
 
-    st.markdown("---")
-    st.markdown("#### Score Outcomes")
-
-    scale_colors: list = ["#1a7a4a", "#2d9e5f", "#b8860b", "#cc6600", "#1a5a99", "#888888"]
-    segs: str = "".join(
-        f'<div class="scale-seg" style="background:{c};"></div>' for c in scale_colors
-    )
-    st.markdown(f'<div class="scale-bar">{segs}</div>', unsafe_allow_html=True)
-
-    for (lo, hi, label, _, emoji, color) in OUTCOMES:
-        st.markdown(
-            f'<div style="font-size:0.87rem;margin:3px 0;">'
-            f'<span style="color:{color};font-weight:700;">{emoji}</span> '
-            f'<b>{lo}–{hi}</b> — {label}</div>',
-            unsafe_allow_html=True
-        )
-
 
 elif st.session_state["page"] == "details":
 
@@ -510,8 +499,8 @@ elif st.session_state["page"] == "details":
     errors: dict = st.session_state.get("errors", {})
 
     name_fields: list = [
-        ("surname",    "Surname",    "e.g. Smith, O'Connor, Smith-Jones"),
-        ("given_name", "Given Name", "e.g. John, Mary Ann"),
+        ("surname",    "Surname",    "e.g. Boyjonov"),
+        ("given_name", "Given Name", "e.g. Hamrozbek"),
     ]
 
     for field_key, field_label, placeholder in name_fields:
@@ -522,13 +511,13 @@ elif st.session_state["page"] == "details":
             st.markdown(f'<div class="err-box">⚠ {errors[field_key]}</div>', unsafe_allow_html=True)
 
     dob_val: str = st.text_input("Date of Birth", value=st.session_state["dob"],
-                                  placeholder="DD/MM/YYYY", key="inp_dob")
+                                  placeholder="e.g. 12/10/2006", key="inp_dob")
     st.session_state["dob"] = dob_val
     if "dob" in errors:
         st.markdown(f'<div class="err-box">⚠ {errors["dob"]}</div>', unsafe_allow_html=True)
 
     sid_val: str = st.text_input("Student ID", value=st.session_state["student_id"],
-                                  placeholder="Digits only, e.g. 210012", key="inp_sid")
+                                  placeholder="e.g. 00020922", key="inp_sid")
     st.session_state["student_id"] = sid_val
     if "student_id" in errors:
         st.markdown(f'<div class="err-box">⚠ {errors["student_id"]}</div>', unsafe_allow_html=True)
@@ -856,9 +845,7 @@ elif st.session_state["page"] == "load":
 st.markdown("---")
 st.markdown(
     '<div style="text-align:center;font-size:0.78rem;color:#888;">'
-    'Quiet Study Zone Preference Survey &nbsp;·&nbsp; '
-    'Fundamentals of Programming 4BUIS008C &nbsp;·&nbsp; '
-    'Westminster International University in Tashkent'
+    'Quiet Study Zone Preference Survey'
     '</div>',
     unsafe_allow_html=True
 )
