@@ -3,7 +3,7 @@ import csv
 import re
 import io
 import os
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 import streamlit as st
 
 QUESTIONS_FILE: str = "questions.json"
@@ -265,7 +265,7 @@ def validate_name(name: str) -> bool:
 def validate_dob(dob_str: str) -> bool:
     try:
         dob = datetime.strptime(dob_str.strip(), "%d/%m/%Y")
-        today = datetime.today()
+        today = datetime.now(timezone(timedelta(hours=5))).replace(tzinfo=None)
         age: int = today.year - dob.year - (
             (today.month, today.day) < (dob.month, dob.day)
         )
@@ -642,7 +642,7 @@ elif st.session_state["page"] == "survey":
                     "name":               f"{st.session_state['given_name']} {st.session_state['surname']}",
                     "student_id":         st.session_state["student_id"],
                     "dob":                st.session_state["dob"],
-                    "date_taken":         datetime.today().strftime("%d/%m/%Y %H:%M"),
+                    "date_taken":         datetime.now(timezone(timedelta(hours=5))).strftime("%d/%m/%Y %H:%M"),
                     "total_score":        score,
                     "max_score":          MAX_SCORE,
                     "percentage":         pct,
@@ -712,7 +712,7 @@ elif st.session_state["page"] == "result":
                 'The file saves to your device automatically.</div>',
                 unsafe_allow_html=True)
 
-    ts: str        = datetime.today().strftime("%Y%m%d_%H%M%S")
+    ts: str        = datetime.now(timezone(timedelta(hours=5))).strftime("%Y%m%d_%H%M%S")
     sid: str       = result.get("student_id", "000")
     base_name: str = f"result_{sid}_{ts}"
 
